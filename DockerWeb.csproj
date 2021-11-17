@@ -21,8 +21,6 @@
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
     <None Remove="C:\Users\jiang\.nuget\packages\nlog.config\4.7.12\contentFiles\any\any\NLog.config" />
-    <None Remove="Dockerfile" />
-    <None Remove="README.md" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +49,10 @@
 
   <ItemGroup>
     <Content Remove="C:\Users\jiang\.nuget\packages\mongodb.driver.core\2.13.2\build\../runtimes/win/native/snappy32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="nlog.config" />
   </ItemGroup>
 
 </Project>

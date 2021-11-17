@@ -185,14 +185,14 @@ namespace DockerWeb.ComHelper
 
         public static void StockNumdata()
         {
-            string chuangye = "300";
+           // string chuangye = "300";
             string h1 = "600";
             string h2 = "601";
             string h3 = "603";
             string s = "000";
             string zx = "002";
             List<string> st = new List<string>();
-            st.Add(chuangye);
+           // st.Add(chuangye);
             st.Add(h1);
             st.Add(h2);
             st.Add(h3);
@@ -241,8 +241,9 @@ namespace DockerWeb.ComHelper
                             }
                         }
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        LogHelper.Default.Error("0001",ex.ToString());
                     }
                 }
             }

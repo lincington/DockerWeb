@@ -18,14 +18,14 @@ namespace DockerWeb
             //3.创建并配置一个触发器即trigger   1s执行一次
             ITrigger _CronTrigger = TriggerBuilder.Create()
               .WithIdentity("定时确认")
-              .WithCronSchedule("0 0 20 ? * MON-FRI") //秒 分 时 某一天 月 周 年(可选参数)
+              .WithCronSchedule("0 15 20 ? * MON-FRI") //秒 分 时 某一天 月 周 年(可选参数)
               .Build()
               as ITrigger;
             //4.将job和trigger加入到作业调度池中
             scheduler.ScheduleJob(job, _CronTrigger);
             //5.开启调度
             scheduler.Start();
-            Console.ReadLine();
+         
         }
     }
 
@@ -39,10 +39,11 @@ namespace DockerWeb
         /// <returns></returns>
         public async Task Execute(IJobExecutionContext context)
         {
+            ConnHelper.StockNumdata();
             IDatabase db = StackExchangeRedisHelper.Instance.GetDatabase();
             await Task.Run(() =>
             {
-                for (int i = 0; i < 1000; i++)
+                for (int i = 0; i < 4000; i++)
                 {
                     if (!db.StringGet(i.ToString("D6")).IsNullOrEmpty)
                     {

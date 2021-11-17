@@ -24,7 +24,7 @@ else
 
 
 ConnHelper dd = new ConnHelper();
-ConnHelper.StockNumdata();
+
 ScheduleManage.Show();
 
 
