@@ -11,9 +11,25 @@
 
   <ItemGroup>
     <Compile Remove="bin\**" />
+    <Compile Remove="ComHelper\**" />
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="Models\**" />
     <Content Remove="bin\**" />
+    <Content Remove="ComHelper\**" />
+    <Content Remove="Controllers\**" />
+    <Content Remove="Models\**" />
     <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="ComHelper\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="Models\**" />
     <None Remove="bin\**" />
+    <None Remove="ComHelper\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ScheduleManage.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,21 +37,6 @@
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
     <None Remove="C:\Users\jiang\.nuget\packages\nlog.config\4.7.12\contentFiles\any\any\NLog.config" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FreeSql" Version="2.6.100" />
-    <PackageReference Include="FreeSql.Provider.MySql" Version="2.6.100" />
-    <PackageReference Include="FreeSql.Provider.SqlServer" Version="2.6.100" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
-    <PackageReference Include="MongoDB.Bson" Version="2.13.2" />
-    <PackageReference Include="MongoDB.Driver" Version="2.13.2" />
-    <PackageReference Include="MongoDB.Driver.Core" Version="2.13.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="NLog" Version="4.7.12" />
-    <PackageReference Include="NLog.Config" Version="4.7.12" />
-    <PackageReference Include="Quartz" Version="3.3.3" />
-    <PackageReference Include="StackExchange.Redis" Version="2.2.88" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +50,10 @@
 
   <ItemGroup>
     <Content Remove="C:\Users\jiang\.nuget\packages\mongodb.driver.core\2.13.2\build\../runtimes/win/native/snappy32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Models\HelloHandler.cs" />
   </ItemGroup>
 
   <ItemGroup>

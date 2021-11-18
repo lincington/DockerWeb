@@ -1,5 +1,4 @@
 using DockerWeb;
-using DockerWeb.ComHelper;
 using DockerWeb.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +22,7 @@ else
     app.UseHsts();
 }
 
-app.MapGet("/", HelloHandler.Hello);
+app.MapGet("/asd", HelloHandler.Hello);
 
 DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
 defaultFilesOptions.DefaultFileNames.Clear();
