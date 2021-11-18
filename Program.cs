@@ -1,5 +1,6 @@
 using DockerWeb;
 using DockerWeb.ComHelper;
+using DockerWeb.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,11 +23,7 @@ else
     app.UseHsts();
 }
 
-
-ConnHelper dd = new ConnHelper();
-
-ScheduleManage.Show();
-
+app.MapGet("/", HelloHandler.Hello);
 
 DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
 defaultFilesOptions.DefaultFileNames.Clear();
